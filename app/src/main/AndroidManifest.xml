@@ -14,8 +14,8 @@
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
@@ -26,13 +26,14 @@
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-
         <activity
             android:name=".ui.BrowseActivity"
             android:label="@string/activity_browse"
@@ -41,7 +42,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
         </activity>
-
         <activity
             android:name=".ui.DetailsActivity"
             android:label="@string/activity_details"
@@ -59,14 +59,12 @@
             android:label="@string/app_name"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
-                <action android:name="android.service.notification.NotificationListenerService"/>
+                <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>
         </service>
-
         <service
             android:name=".service.ActivityRecognitionIntentService"
             android:exported="false" />
-
         <service
             android:name=".service.FusedLocationIntentService"
             android:exported="false" />
@@ -83,6 +81,9 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <service
+            android:name=".service.DeleteLogValueService"
+            android:exported="false"></service>
     </application>
 
 </manifest>
