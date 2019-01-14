@@ -35,6 +35,8 @@
     <string name="snackbar_export">Exporting… please wait…</string>
 
     <string name="details_error">Unable to load the details of this entry.</string>
+    <string name="details_value_deleted">Deleted successfully</string>
+    <string name="details_delete">Delete</string>
 
     <string name="empty_log_file">No notifications logged yet! Is the notification access enabled?</string>
 
